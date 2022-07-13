@@ -181,7 +181,7 @@ for row in grid:
                 continue
             else:
                 if (grid[neighbour_position[0]][neighbour_position[1]] == 0):
-                    init_matrix[current][neighbour_number] = 1
+                    init_matrix[current_str][str(neighbour_number)] = 1
         y += 1
         current += 1
     x += 1
@@ -192,4 +192,4 @@ graph = Graph(nodes, init_matrix)
 previous_nodes, shortest_path = dijkstra_algorithm(graph=graph, start_node=0)
 
 # Print result
-print_result(previous_nodes, shortest_path, start_node=0, target_node=99)
+print_result(previous_nodes, shortest_path, start_node='0', target_node='99')
